@@ -24,6 +24,7 @@ Game_Jam_project/[Rr]ecordings/
 Game_Jam_project/[Aa]ssets/Plugins/Editor/JetBrains*
 
 # Visual Studio cache directory
+.vscode/
 .vs/
 
 # Gradle cache directory
