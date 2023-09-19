@@ -1,21 +1,30 @@
 using NUnit.Framework;
 using TMPro;
+using TMPro.EditorUtilities;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.EventSystems;
+using view;
 
 namespace model
 {
   public class PlayerModel : MonoBehaviour
   {
     [SerializeField] private view.PlayerView _player_view;
+    [SerializeField] private view.UIView _UI_view = view.UIView.Instance;
 
     [SerializeField] private float _speed = 0f;
     private Vector2 _move_direction = Vector2.zero;
     private bool _eyes_opened = false;
     [SerializeField] private float _max_opened_eyes_time = 0f;
     [SerializeField] private float _opened_eyes_time = 0f;
+
+    private void Awake()
+    {
+      _opened_eyes_time = _max_opened_eyes_time;
+      _UI_view.Configure(_max_opened_eyes_time);
+    }
 
     private void FixedUpdate()
     {
@@ -26,6 +35,7 @@ namespace model
       if (_eyes_opened)
       {
         _opened_eyes_time -= Time.deltaTime;
+        _UI_view.UpdateEyeBar(-Time.deltaTime);
         if (_opened_eyes_time <= 0)
         {
           CloseEyes();
@@ -37,14 +47,14 @@ namespace model
     {
       if (_opened_eyes_time > 0)
       {
-        _player_view.OpenEyes();
+        _UI_view.OpenEyes();
         _eyes_opened = true;
       }
     }
 
     public void CloseEyes()
     {
-      _player_view.CloseEyes();
+      _UI_view.CloseEyes();
       _eyes_opened = false;
     }
 

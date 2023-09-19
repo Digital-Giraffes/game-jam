@@ -7,21 +7,14 @@ namespace view
 {
   public class PlayerView : MonoBehaviour
   {
-    [SerializeField] private Image _eye_screen;
-
     public void ChangePosition(Vector3 delta_position)
     {
       gameObject.transform.position += delta_position;
     }
 
-    public void OpenEyes()
+    public void SetPosition(Vector3 new_position)
     {
-      _eye_screen.enabled = false;
-    }
-
-    public void CloseEyes()
-    {
-      _eye_screen.enabled = true;
+      gameObject.transform.position = new_position;
     }
   }
 }
