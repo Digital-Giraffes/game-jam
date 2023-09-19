@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations;
@@ -12,7 +13,9 @@ namespace model
 
     [SerializeField] private float _speed = 0f;
     private Vector2 _move_direction = Vector2.zero;
-    private bool _are_eyes_opened = false;
+    private bool _eyes_opened = false;
+    [SerializeField] private float _max_opened_eyes_time = 0f;
+    [SerializeField] private float _opened_eyes_time = 0f;
 
     private void FixedUpdate()
     {
@@ -20,18 +23,29 @@ namespace model
       {
         _player_view.ChangePosition(_move_direction * _speed * Time.deltaTime);
       }
+      if (_eyes_opened)
+      {
+        _opened_eyes_time -= Time.deltaTime;
+        if (_opened_eyes_time <= 0)
+        {
+          CloseEyes();
+        }
+      }
     }
 
     public void OpenEyes()
     {
-      _player_view.OpenEyes();
-      _are_eyes_opened = true;
+      if (_opened_eyes_time > 0)
+      {
+        _player_view.OpenEyes();
+        _eyes_opened = true;
+      }
     }
 
     public void CloseEyes()
     {
       _player_view.CloseEyes();
-      _are_eyes_opened = false;
+      _eyes_opened = false;
     }
 
     public void SetSpeed(float new_speed)
