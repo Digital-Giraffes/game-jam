@@ -1,19 +1,37 @@
+using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.EventSystems;
 
 namespace model
 {
   public class PlayerModel : MonoBehaviour
   {
-    [SerializeField] private view.PlayerView _player_v;
+    [SerializeField] private view.PlayerView _player_view;
 
     [SerializeField] private float _speed = 0f;
-    private Vector2 _move_direction;
+    private Vector2 _move_direction = Vector2.zero;
+    private bool _are_eyes_opened = false;
 
     private void FixedUpdate()
     {
-      _player_v.ChangePosition(_move_direction * _speed * Time.deltaTime);
+      if (_move_direction != Vector2.zero)
+      {
+        _player_view.ChangePosition(_move_direction * _speed * Time.deltaTime);
+      }
+    }
+
+    public void OpenEyes()
+    {
+      _player_view.OpenEyes();
+      _are_eyes_opened = true;
+    }
+
+    public void CloseEyes()
+    {
+      _player_view.CloseEyes();
+      _are_eyes_opened = false;
     }
 
     public void SetSpeed(float new_speed)

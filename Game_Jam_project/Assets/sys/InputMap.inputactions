@@ -1,5 +1,5 @@
 {
-    "name": "WASD_Controls",
+    "name": "InputMap",
     "maps": [
         {
             "name": "Player",
@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Eyes",
+                    "type": "Button",
+                    "id": "18db5b13-0ea9-44d7-97a1-391bfc6d1f98",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -125,6 +134,17 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b2238a0c-2387-45ff-80c6-236ffc665d59",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Hold(duration=0.2,pressPoint=0.2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Eyes",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
