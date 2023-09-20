@@ -339,7 +339,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.0920957, g: 0.067684226, b: 0.122641504, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -894,9 +894,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.5155875}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.30098534
 --- !u!50 &1084682313
 Rigidbody2D:
   serializedVersion: 4
@@ -1882,8 +1882,8 @@ Tilemap:
   - first: {x: -1, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2025,10 +2025,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: 3e47c5100ef5a2922ae8d6a74b803abe, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 55dcfee64fbd7c1c0b6625a7172e52c0, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 344c054ca7613a621a743b58813e4d5f, type: 2}
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: f9c6042528bac7e66a3b158fabf5a134, type: 2}
   m_TileSpriteArray:
@@ -2036,10 +2036,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 2
-    m_Data: {fileID: 21300000, guid: 0627288b494524f83b36793d61ca97a4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: ecce229b61f4de05dacd64150204d283, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 6ee89b895907d55d78d1f961c57f180a, type: 3}
   - m_RefCount: 13
     m_Data: {fileID: 21300000, guid: 4fad0b7723b03b5299bf69f4734a78d4, type: 3}
   m_TileMatrixArray:
@@ -2325,7 +2325,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 9755ef0c93df06b0cb12fba0ac097d87, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
