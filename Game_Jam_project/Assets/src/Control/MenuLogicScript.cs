@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace src.Control
 {
@@ -45,7 +46,12 @@ namespace src.Control
 
     public void LoadLevel(int num)
     {
+      SceneManager.LoadScene(num);
+    }
 
+    public void Retry()
+    {
+      LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }
   }
 }
