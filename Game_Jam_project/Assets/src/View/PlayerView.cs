@@ -42,6 +42,7 @@ namespace view
       else if (on_carpet && _is_walking)
       {
         _walking_sound.Pause();
+        _is_walking = false;
       }
     }
   }
