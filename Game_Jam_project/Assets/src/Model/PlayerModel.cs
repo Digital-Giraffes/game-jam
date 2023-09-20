@@ -1,3 +1,4 @@
+using control;
 using NUnit.Framework;
 using TMPro;
 using TMPro.EditorUtilities;
@@ -17,6 +18,8 @@ namespace model
     [SerializeField] private float _speed = 0f;
     private Vector2 _move_direction = Vector2.zero;
     private bool _eyes_opened = false;
+    private bool _on_carpet = false;
+
     [SerializeField] private float _max_opened_eyes_time = 0f;
     [SerializeField] private float _opened_eyes_time = 0f;
 
@@ -30,7 +33,11 @@ namespace model
     {
       if (_move_direction != Vector2.zero)
       {
-        _player_view.ChangePosition(_move_direction * _speed * Time.deltaTime);
+        _player_view.Walking(_move_direction * _speed * Time.deltaTime, _on_carpet);
+      }
+      else
+      {
+        _player_view.Walking(Vector3.zero, true);
       }
       if (_eyes_opened)
       {
@@ -73,9 +80,20 @@ namespace model
       _move_direction = new_move_direction;
     }
 
+    public void SetCarpet(bool value)
+    {
+      _on_carpet = value;
+    }
+
     public Vector2 GetMoveDirection()
     {
       return _move_direction;
+    }
+
+    public void Lost()
+    {
+      GameObject.FindObjectOfType<PlayerControls>().gameObject.SetActive(false);
+      _UI_view.Lost();
     }
   }
 }

@@ -25,6 +25,7 @@ namespace view
     // =============================== Body ===============================
 
     [SerializeField] private Image _eye_screen;
+    [SerializeField] private GameObject _lost_screen;
     [SerializeField] private UIDoubleBar _eye_bar;
 
     public void OpenEyes()
@@ -46,8 +47,13 @@ namespace view
     {
       _eye_bar.SetMaxValue(max_eyes_time);
       _eye_bar.SetValue(max_eyes_time);
+      _eye_screen.enabled = true;
     }
 
-
+    public void Lost()
+    {
+      CloseEyes();
+      _lost_screen.SetActive(true);
+    }
   }
 }
