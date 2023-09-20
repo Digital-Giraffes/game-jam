@@ -27,6 +27,9 @@ Game_Jam_project/[Aa]ssets/Plugins/Editor/JetBrains*
 .vscode/
 .vs/
 
+#rider cache directory
+.idea
+
 # Gradle cache directory
 .gradle/
 
@@ -71,3 +74,5 @@ Game_Jam_project/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 # Temporary auto-generated Android Assets
 Game_Jam_project/[Aa]ssets/[Ss]treamingAssets/aa.meta
 Game_Jam_project/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+
