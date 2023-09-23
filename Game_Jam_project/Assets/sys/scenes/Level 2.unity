@@ -2106,11 +2106,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1889607900}
-<<<<<<< HEAD
   - {fileID: 580642308}
   - {fileID: 1195254646}
-=======
->>>>>>> parent of e8da85b (Retry UI)
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1882285441

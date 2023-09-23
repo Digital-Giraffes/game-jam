@@ -3326,14 +3326,11 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
 --- !u!4 &2128223904 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1776882546485721933, guid: 885b655da593e543fa9bfa13e83c59d2, type: 3}
   m_PrefabInstance: {fileID: 181304493}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> parent of e8da85b (Retry UI)
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
