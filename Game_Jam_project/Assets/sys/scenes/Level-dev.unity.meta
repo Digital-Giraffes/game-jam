@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Game_Jam_project/Assets/res/sprites/Previw.ppm.meta
 <<<<<<< HEAD
 <<<<<<<< HEAD:Game_Jam_project/Assets/res/sprites/Previw.ppm.meta
 guid: 7fa5f44847efa55418e090fe02058a1a
@@ -8,6 +9,9 @@ guid: 05c9d24e4d8155c9086f9b8baceda498
 =======
 guid: 77904dd34c3342c29af00c6d80069771
 >>>>>>> Menu_again
+=======
+guid: c7938dace83dca6bf9cd3f41c6de87ff
+>>>>>>> parent of e8da85b (Retry UI):Game_Jam_project/Assets/sys/scenes/Level-dev.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
