@@ -1,6 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Game_Jam_project/Assets/TextMesh Pro/Examples & Extras/Prefabs/TextMeshPro - Prefab 1.prefab.meta
 guid: a6e39ced0ea046bcb636c3f0b2e2a745
 NativeFormatImporter:
+========
+guid: 1bd93c670ba56e603bc02b679dfd295d
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> parent of 6db436f (Merge branch 'Menu_again'):Game_Jam_project/Assets/sys/scenes/Menus.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

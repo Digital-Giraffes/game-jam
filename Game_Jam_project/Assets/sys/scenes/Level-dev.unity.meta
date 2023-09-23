@@ -1,4 +1,6 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Game_Jam_project/Assets/sys/scenes/Level-dev.unity.meta
 <<<<<<< HEAD:Game_Jam_project/Assets/res/sprites/Previw.ppm.meta
 <<<<<<< HEAD
 <<<<<<<< HEAD:Game_Jam_project/Assets/res/sprites/Previw.ppm.meta
@@ -12,6 +14,16 @@ guid: 77904dd34c3342c29af00c6d80069771
 =======
 guid: c7938dace83dca6bf9cd3f41c6de87ff
 >>>>>>> parent of e8da85b (Retry UI):Game_Jam_project/Assets/sys/scenes/Level-dev.unity.meta
+========
+guid: 9f84c53a41a98ed87ba1ab7b98f54338
+>>>>>>>> parent of 6db436f (Merge branch 'Menu_again'):Game_Jam_project/Assets/res/sprites/Previw.ppm.meta
+=======
+<<<<<<<< HEAD:Game_Jam_project/Assets/sys/scenes/Menus/SettingsMenu.unity.meta
+guid: 071ec722fe896cf6f8c5e21e5e4f3411
+========
+guid: c7938dace83dca6bf9cd3f41c6de87ff
+>>>>>>>> parent of 6db436f (Merge branch 'Menu_again'):Game_Jam_project/Assets/sys/scenes/Level-dev.unity.meta
+>>>>>>> parent of 6db436f (Merge branch 'Menu_again')
 DefaultImporter:
   externalObjects: {}
   userData: 

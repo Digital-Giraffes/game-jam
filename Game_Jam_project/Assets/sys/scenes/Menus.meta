@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Game_Jam_project/Assets/sys/scenes/Menus.meta
 guid: 1bd93c670ba56e603bc02b679dfd295d
 folderAsset: yes
+========
+guid: 2cda990e2423bbf4892e6590ba056729
+>>>>>>>> parent of 6db436f (Merge branch 'Menu_again'):Game_Jam_project/Assets/sys/scenes/SampleScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
