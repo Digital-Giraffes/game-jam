@@ -2427,8 +2427,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player_view: {fileID: 1084682311}
   _UI_view: {fileID: 1591208160}
-  _speed: 7
-  _max_opened_eyes_time: 7
+  _speed: 5
+  _max_opened_eyes_time: 5000
   _opened_eyes_time: 0
 --- !u!1 &1927636643
 GameObject:
