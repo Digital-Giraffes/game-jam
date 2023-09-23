@@ -398,7 +398,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -418,7 +418,7 @@ PolygonCollider2D:
       - {x: 1.087609, y: 2.764185}
       - {x: 1.0836427, y: 1.6514435}
       - {x: 2.040322, y: 1.644144}
-      - {x: 2.0202973, y: -0.48217863}
+      - {x: 2.0256026, y: -0.40810472}
       - {x: 5.0673046, y: -0.3870942}
       - {x: 5.1863203, y: 1.6381755}
       - {x: 6.0642695, y: 1.6264575}
@@ -426,8 +426,8 @@ PolygonCollider2D:
       - {x: 7.164009, y: -1.4099803}
       - {x: 7.1816998, y: 2.7400062}
       - {x: 4.045152, y: 2.73718}
-      - {x: 3.9937334, y: -0.22810662}
-      - {x: 3.1854405, y: -0.21714628}
+      - {x: 4.0127325, y: 0.80012435}
+      - {x: 3.1766005, y: 0.82100666}
       - {x: 3.1979733, y: 3.739676}
   m_UseDelaunayMesh: 0
 --- !u!4 &159513647 stripped
@@ -451,6 +451,10 @@ PrefabInstance:
       propertyPath: _door
       value: 
       objectReference: {fileID: 866118704}
+    - target: {fileID: 5592330360439983465, guid: 64cf32f0813f2c8489f7c52e620d7197, type: 3}
+      propertyPath: _close_door_timeout
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5923016020402656194, guid: 64cf32f0813f2c8489f7c52e620d7197, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5
@@ -1080,6 +1084,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 8327959360920574744, guid: ec7e03a01456ad44aadf08c15824aab3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1152,6 +1160,10 @@ PrefabInstance:
     - target: {fileID: 1776882546485721933, guid: 885b655da593e543fa9bfa13e83c59d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711141165637790837, guid: 885b655da593e543fa9bfa13e83c59d2, type: 3}
+      propertyPath: period
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2023,10 +2035,10 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 1, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 3
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
@@ -2108,7 +2120,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 0
   - first: {x: 1, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -2179,14 +2191,23 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  m_AnimatedTiles: {}
+  m_AnimatedTiles:
+  - first: {x: -1, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_AnimatedSprites:
+      - {fileID: 21300000, guid: b46c3c1e318c8bc7c80bc541d87b2c39, type: 3}
+      - {fileID: 21300000, guid: 694de62c5fecf9b0396039c6f14da7d4, type: 3}
+      m_AnimationSpeed: 0.25
+      m_AnimationTimeOffset: 0
+      m_Flags: 0
   m_TileAssetArray:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 58d81650e54f4e413ac742b1b344af75, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 45295f62e1bf1534c84dfcf82eb214b5, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: a8bb5ca288f1363038084de165077bbc, type: 2}
+    m_Data: {fileID: 11400000, guid: f115eb263ab632a7981a7e3d03dbb277, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: f9c6042528bac7e66a3b158fabf5a134, type: 2}
   - m_RefCount: 1
@@ -2207,7 +2228,7 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: 0a46d4112fd151011964b95c77617226, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: b46c3c1e318c8bc7c80bc541d87b2c39, type: 3}
+    m_Data: {fileID: 21300000, guid: 694de62c5fecf9b0396039c6f14da7d4, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 4fad0b7723b03b5299bf69f4734a78d4, type: 3}
   - m_RefCount: 1
@@ -2449,8 +2470,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player_view: {fileID: 1084682311}
   _UI_view: {fileID: 1591208160}
-  _speed: 5
-  _max_opened_eyes_time: 5000
+  _speed: 7
+  _max_opened_eyes_time: 7
   _opened_eyes_time: 0
 --- !u!1 &1927636643
 GameObject:
