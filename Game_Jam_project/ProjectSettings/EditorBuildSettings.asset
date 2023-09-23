@@ -5,40 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/sys/scenes/Level-dev.unity
     guid: c7938dace83dca6bf9cd3f41c6de87ff
-  - enabled: 1
-    path: Assets/sys/scenes/MainMenu.unity
-    guid: f607697da57c329dfbddc65ad6389d1c
-  - enabled: 1
-    path: Assets/sys/scenes/Level 1.unity
-    guid: 1ee9ab74673b9ca48be8c6fbc05cb020
-  - enabled: 1
-    path: Assets/sys/scenes/Level 2.unity
-    guid: dd0f98eae70b702a9b7082780805dbd8
-  - enabled: 1
-    path: Assets/sys/scenes/Level 3.unity
-    guid: 9c24be865f339c3d9ba5f2df1cbb72d1
-  - enabled: 1
-    path: Assets/sys/scenes/Level 4.unity
-    guid: 10054a38b140eebef907e0c516d8cb6b
-  - enabled: 1
-    path: Assets/sys/scenes/Level 5.unity
-    guid: d24d68eca194194d686e9448cc5e1d66
-  - enabled: 1
-    path: Assets/sys/scenes/Level 6.unity
-    guid: 2e61282603cc849c1ba385e772c36f2c
-  - enabled: 1
-    path: Assets/sys/scenes/Level 7.unity
-    guid: e1ac508da08a99350a27b4fdc56fbd52
-  - enabled: 1
-    path: Assets/sys/scenes/Level 8.unity
-    guid: f0b29109f27f5af3b998538bb757fae7
-  - enabled: 1
-    path: Assets/sys/scenes/Level 9.unity
-    guid: dfbf6e7e3614001008a73bfff4a18551
-  - enabled: 1
-    path: Assets/sys/scenes/Level 10.unity
-    guid: 73d89008e24e0774b811b227df056ca5
   m_configObjects: {}

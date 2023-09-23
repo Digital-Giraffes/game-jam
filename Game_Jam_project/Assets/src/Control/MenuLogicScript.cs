@@ -49,11 +49,6 @@ namespace src.Control
       SceneManager.LoadScene(num);
     }
 
-    public void NextLevel()
-    {
-      LoadLevel((SceneManager.GetActiveScene().buildIndex + 1) % 11);
-    }
-
     public void Retry()
     {
       LoadLevel(SceneManager.GetActiveScene().buildIndex);

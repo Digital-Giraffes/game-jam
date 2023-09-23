@@ -95,11 +95,5 @@ namespace model
       GameObject.FindObjectOfType<PlayerControls>().gameObject.SetActive(false);
       _UI_view.Lost();
     }
-    
-    public void Won()
-    {
-      GameObject.FindObjectOfType<PlayerControls>().gameObject.SetActive(false);
-      _UI_view.Won();
-    }
   }
 }

@@ -26,7 +26,6 @@ namespace view
 
     [SerializeField] private Image _eye_screen;
     [SerializeField] private GameObject _lost_screen;
-    [SerializeField] private GameObject _won_screen;
     [SerializeField] private UIDoubleBar _eye_bar;
 
     public void OpenEyes()
@@ -55,12 +54,6 @@ namespace view
     {
       CloseEyes();
       _lost_screen.SetActive(true);
-    }
-    
-    public void Won()
-    {
-      CloseEyes();
-      _won_screen.SetActive(true);
     }
   }
 }
