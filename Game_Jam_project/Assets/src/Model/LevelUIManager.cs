@@ -8,13 +8,9 @@ namespace model
 {
     public class LevelUIManager : MonoBehaviour
     {
-        [SerializeReference] private GameObject lostScreen;
-        [SerializeReference] private GameObject wonScreen;
-        
-        
         public static void NextLevel()
         {
-            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1)% 10);
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1)% 11);
         }
 
         public static void ExitToLevelSelect()

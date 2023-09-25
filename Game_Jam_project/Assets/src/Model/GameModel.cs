@@ -10,7 +10,7 @@ using view;
 
 namespace model
 {
-  public class PlayerModel : MonoBehaviour
+  public class GameModel : MonoBehaviour
   {
     [SerializeReference] private view.PlayerView playerView;
     [SerializeReference] private view.LevelUIView levelUIView;

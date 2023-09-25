@@ -6,13 +6,13 @@ namespace model
   public class SpikesModel : MonoBehaviour
   {
     public float period;
-    private PlayerModel _player_model;
+    private GameModel _gameModel;
     private AudioSource _spikes_sound;
     private bool _active = false;
 
     private void Awake()
     {
-      _player_model = GameObject.FindObjectOfType<PlayerModel>();
+      _gameModel = GameObject.FindObjectOfType<GameModel>();
       _spikes_sound = gameObject.GetComponent<AudioSource>();
       SetInactive();
     }
@@ -32,9 +32,9 @@ namespace model
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-      if (_active && other.tag == "Player")
+      if (_active && other.CompareTag("Player"))
       {
-        _player_model.Lost();
+        _gameModel.Lost();
       }
     }
   }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace model
 {
-    public class PitModel : MonoBehaviour
+    public class FlagModel : MonoBehaviour
     {
         private GameModel _gameModel;
 
@@ -17,7 +17,7 @@ namespace model
         {
             if (other.CompareTag("Player"))
             {
-                _gameModel.Lost();
+                _gameModel.Won();
             }
         }
     }

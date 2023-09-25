@@ -12,7 +12,6 @@ namespace view
         [SerializeReference] private UIDoubleBar eyeBar;
         [SerializeReference] private GameObject lostScreen;
         [SerializeReference] private GameObject wonScreen;
-        [SerializeReference] private Image backgroundUI; 
 
         public void OpenEyes()
         {
@@ -35,22 +34,16 @@ namespace view
             eyeBar.SetValue(maxEyesTime);
             eyeScreen.enabled = true;
         }
-
-        private void DisableEye()
-        {
-            eyeUI.SetActive(false);
-            backgroundUI.enabled = true;
-        }
         
         public void Lost()
         {
-            DisableEye();
+            CloseEyes();
             lostScreen.SetActive(true);
         }
 
         public void Won()
         {
-            DisableEye();
+            CloseEyes();
             wonScreen.SetActive(true);
         }
     }
