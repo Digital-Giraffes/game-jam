@@ -1,8 +1,8 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
-guid: 4139b14fadc8cfac7a1c36420a9e7fb8
+guid: 6862a34600db266a28e50631b045c0e1
 =======
-guid: 8894ae335d4774a2e8750a8f47da31c5
+guid: 20d6034f141414098a204044d1224365
 >>>>>>> Menu_again
 TextureImporter:
   internalIDToNameTable: []
@@ -52,7 +52,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+  spritePixelsToUnits: 256
+=======
   spritePixelsToUnits: 100
+>>>>>>> Menu_again
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
