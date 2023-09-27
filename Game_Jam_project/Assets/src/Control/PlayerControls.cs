@@ -7,7 +7,7 @@ namespace control
 {
   public class PlayerControls : MonoBehaviour
   {
-    [SerializeField] private model.PlayerModel _player_model;
+    [SerializeField] private model.GameModel _player_model;
 
     private CustomInput _input = null;
 

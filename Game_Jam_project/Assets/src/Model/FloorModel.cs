@@ -6,18 +6,18 @@ namespace model
 {
   public class FloorModel : MonoBehaviour
   {
-    private PlayerModel _player_model;
+    private GameModel _gameModel;
 
     private void Awake()
     {
-      _player_model = GameObject.FindObjectOfType<PlayerModel>();
+      _gameModel = GameObject.FindObjectOfType<GameModel>();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
       if (other.tag == "Player")
       {
-        _player_model.Lost();
+        _gameModel.Lost();
       }
     }
   }
