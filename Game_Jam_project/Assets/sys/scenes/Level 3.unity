@@ -2165,6 +2165,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[3].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 6636337590943133378, guid: 934c471374d41dc209b9bc4f7a1ec35c, type: 3}
+      propertyPath: maxOpenedEyeTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7331299510030352697, guid: 934c471374d41dc209b9bc4f7a1ec35c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.1
