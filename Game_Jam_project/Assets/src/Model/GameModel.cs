@@ -11,6 +11,7 @@ namespace model
   {
     [SerializeReference] private view.PlayerView playerView;
     [SerializeReference] private view.LevelUIView levelUIView;
+    [SerializeReference] private GameObject gameObjects;
     [SerializeField] private float maxOpenedEyeTime = 0f;
     
     private float _openedEyeTime = 0f;
@@ -64,13 +65,15 @@ namespace model
 
     public void Lost()
     {
-      GameObject.FindObjectOfType<PlayerControls>().gameObject.SetActive(false);
+      GameObject.FindWithTag("GameController").SetActive(false);
+      gameObjects.SetActive(false);
       levelUIView.Lost();
     }
 
     public void Won()
     {
-      GameObject.FindObjectOfType<PlayerControls>().gameObject.SetActive(false);
+      GameObject.FindWithTag("GameController").SetActive(false);
+      gameObjects.SetActive(false);
       levelUIView.Won();
     }
   }

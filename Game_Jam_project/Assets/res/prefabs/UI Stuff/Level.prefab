@@ -2467,6 +2467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerView: {fileID: 8197872089028444148}
   levelUIView: {fileID: 1945446115598007243}
+  gameObjects: {fileID: 3814430395982920900}
   maxOpenedEyeTime: 3
 --- !u!1 &5699936940091635504
 GameObject:
@@ -3554,7 +3555,7 @@ GameObject:
   - component: {fileID: 6462102778431013531}
   m_Layer: 0
   m_Name: Player Controller
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

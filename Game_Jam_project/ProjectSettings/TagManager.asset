@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spikes
   - LevelUIManager
+  - GameModel
   layers:
   - Default
   - TransparentFX

@@ -1,39 +1,46 @@
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.U2D.Animation;
 
 namespace model
 {
   public class SpikesModel : MonoBehaviour
   {
+    [SerializeReference] private AudioSource spikesExtend;
+    [SerializeReference] private AudioSource spikesRetract;
     public float period;
     private GameModel _gameModel;
-    private AudioSource _spikes_sound;
-    private bool _active = false;
+    private SpriteResolver _resolver;
+    private Collider2D _collider;
 
     private void Awake()
     {
-      _gameModel = GameObject.FindObjectOfType<GameModel>();
-      _spikes_sound = gameObject.GetComponent<AudioSource>();
-      Invoke("SetActive", period);
+      _gameModel = FindObjectOfType<GameModel>();
+      _resolver = gameObject.GetComponent<SpriteResolver>();
+      _collider = gameObject.GetComponent<Collider2D>();
+      _collider.enabled = false;
+      Invoke("SetActive", period); //todo fix callback issue
     }
 
     private void SetActive()
     {
-      _active = true;
+      _collider.enabled = true;
+      _resolver.SetCategoryAndLabel(_resolver.GetCategory(), "Extend");
       Invoke("SetInactive", period);
-      _spikes_sound.Play();
+      spikesExtend.Play();
     }
 
     private void SetInactive()
     {
-      _active = false;
+      _collider.enabled = false;
+      _resolver.SetCategoryAndLabel(_resolver.GetCategory(), "Retract");
       Invoke("SetActive", period);
-      _spikes_sound.Play();
+      spikesRetract.Play();
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-      if (_active && other.CompareTag("Player"))
+      if (other.CompareTag("Player"))
       {
         _gameModel.Lost();
       }
