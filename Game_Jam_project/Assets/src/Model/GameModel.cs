@@ -1,7 +1,4 @@
 using control;
-using NUnit.Framework;
-using TMPro;
-using TMPro.EditorUtilities;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations;
@@ -14,7 +11,6 @@ namespace model
   {
     [SerializeReference] private view.PlayerView playerView;
     [SerializeReference] private view.LevelUIView levelUIView;
-    [SerializeField] private float speed = 0f;
     [SerializeField] private float maxOpenedEyeTime = 0f;
     
     private float _openedEyeTime = 0f;
@@ -30,14 +26,6 @@ namespace model
 
     private void FixedUpdate()
     {
-      if (_moveDirection != Vector2.zero)
-      {
-        playerView.Walking(_moveDirection * (speed * Time.deltaTime), _onCarpet);
-      }
-      else
-      {
-        playerView.Walking(Vector3.zero, true);
-      }
       if (_eyesOpened)
       {
         _openedEyeTime -= Time.deltaTime;
@@ -64,9 +52,9 @@ namespace model
       _eyesOpened = false;
     }
 
-    public void SetMoveDirection(Vector2 new_move_direction)
+    public void Move(Vector2 direction)
     {
-      _moveDirection = new_move_direction;
+      playerView.Walking(direction, _onCarpet);
     }
 
     public void SetCarpet(bool value)

@@ -14,7 +14,7 @@ namespace model
     {
       _gameModel = GameObject.FindObjectOfType<GameModel>();
       _spikes_sound = gameObject.GetComponent<AudioSource>();
-      SetInactive();
+      Invoke("SetActive", period);
     }
 
     private void SetActive()
@@ -28,9 +28,10 @@ namespace model
     {
       _active = false;
       Invoke("SetActive", period);
+      _spikes_sound.Play();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
       if (_active && other.CompareTag("Player"))
       {

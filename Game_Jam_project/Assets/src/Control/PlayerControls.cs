@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 namespace control
 {
@@ -32,12 +33,20 @@ namespace control
 
     private void OnMovementPerfomed(InputAction.CallbackContext context)
     {
-      _player_model.SetMoveDirection(context.ReadValue<Vector2>());
+      var movement = context.ReadValue<Vector2>();
+      if (Math.Abs(movement.x) > Math.Abs(movement.y))
+      {
+        _player_model.Move(Math.Sign(movement.x) * Vector2.right);
+      }
+      else if (Math.Abs(movement.x) < Math.Abs(movement.y))
+      {
+        _player_model.Move(Math.Sign(movement.y) * Vector2.up);
+      }
     }
 
     private void OnMovementCancelled(InputAction.CallbackContext context)
     {
-      _player_model.SetMoveDirection(Vector2.zero);
+      _player_model.Move(Vector2.zero);
     }
 
     private void OnEyesPerformed(InputAction.CallbackContext context)
