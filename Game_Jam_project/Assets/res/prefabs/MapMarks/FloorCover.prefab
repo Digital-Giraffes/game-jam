@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6720898653532168117}
   - component: {fileID: 3241239091957501927}
   m_Layer: 0
-  m_Name: SpecialCover
+  m_Name: FloorCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bffe895c07dd931a0baef3ec672d8092, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dd23d78476b5ce15cbf3f71c97041aca, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

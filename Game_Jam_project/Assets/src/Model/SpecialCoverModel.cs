@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -7,26 +8,19 @@ namespace model
 {
   public class SpecialCoverModel : MonoBehaviour
   {
-    private AudioSource _carpetSounds;
-    private GameModel _gameModel;
+    private AudioSource sound;
 
     private void Awake()
     {
-      _carpetSounds = gameObject.GetComponent<AudioSource>();
-      _gameModel = GameObject.FindObjectOfType<GameModel>();
+      sound = GetComponent<AudioSource>();
     }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-      _carpetSounds.Play();
-      _gameModel.SetCarpet(true);
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-      _carpetSounds.Pause();
-      _gameModel.SetCarpet(false);
+      if (other.CompareTag("Player"))
+      {
+        sound.Play();
+      }
     }
   }
 }

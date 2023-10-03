@@ -17,7 +17,6 @@ namespace model
     private float _openedEyeTime = 0f;
     private Vector2 _moveDirection = Vector2.zero;
     private bool _eyesOpened = false;
-    private bool _onCarpet = false;
 
     private void Awake()
     {
@@ -55,12 +54,7 @@ namespace model
 
     public void Move(Vector2 direction)
     {
-      playerView.Walking(direction, _onCarpet);
-    }
-
-    public void SetCarpet(bool value)
-    {
-      _onCarpet = value;
+      playerView.Walking(direction);
     }
 
     public void Lost()
