@@ -1,13 +1,38 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorModel : MonoBehaviour
+namespace model
 {
-	[SerializeField] private Collider2D _collider;
-
-	private void Awake()
+	public class DoorModel : MonoBehaviour
 	{
-		_collider = gameObject.GetComponent<Collider2D>();
+		private Collider2D _collider;
+		private GameModel _gameModel;
+
+		private void Awake()
+		{
+			_collider = gameObject.GetComponent<Collider2D>();
+			_gameModel = FindObjectOfType<GameModel>();
+		}
+
+		private void OnTriggerEnter2D(Collider2D collision)
+		{
+			if (collision.CompareTag("Player"))
+			{
+				_gameModel.Lost();
+			}
+		}
+
+		public void Open()
+		{
+			_collider.enabled = true;
+		}
+
+		public void Close()
+		{
+			_collider.enabled = false;
+		}
 	}
 }
+
