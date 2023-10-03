@@ -8,12 +8,14 @@ namespace model
 	public class DoorModel : MonoBehaviour
 	{
 		private Collider2D _collider;
+		private SpriteRenderer _sprite;
 		private GameModel _gameModel;
 
 		private void Awake()
 		{
 			_collider = gameObject.GetComponent<Collider2D>();
 			_gameModel = FindObjectOfType<GameModel>();
+			_sprite = gameObject.GetComponent<SpriteRenderer>();
 		}
 
 		private void OnTriggerEnter2D(Collider2D collision)
@@ -26,12 +28,14 @@ namespace model
 
 		public void Open()
 		{
-			_collider.enabled = true;
+			_collider.enabled = false;
+			_sprite.enabled = false;
 		}
 
 		public void Close()
 		{
-			_collider.enabled = false;
+			_collider.enabled = true;
+			_sprite.enabled = true;
 		}
 	}
 }
